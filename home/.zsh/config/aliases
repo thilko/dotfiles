@@ -1,8 +1,64 @@
-alias ll='ls -la'
-alias ..='cd ..'
-alias dl='cd ~/Downloads'
-alias at='bundle exec autotest'
-alias gpr='git pull --rebase'
-alias rvm_reset='rvm rvmrc reset .'
-alias gme='rvm $rvm_env_string do guard'
-alias v='mvim'
+#!/bin/bash
+
+PS1="\u:\w$ "
+alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
+
+# git
+alias gca=git_commit_all
+alias gc="git ci -m"
+alias gl="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+alias gpr="git pull --rebase"
+alias gprs="git pull --rebase && gps"
+alias gcpr="git_commit_prompt"
+
+# bundler
+alias b="bundle"
+alias a="bundle exec 'autotest'"
+alias s="be rake spec"
+alias rsi="be rake spec:integration"
+alias grsh="git reset --hard"
+alias guard="be guard"
+
+function be() {
+  b exec $@
+}
+
+function b() {
+  if [ -e .Gemfile ]
+  then
+    cp Gemfile Gemfile.bak
+    cat .Gemfile >> Gemfile
+    bundle $@
+    mv Gemfile.bak Gemfile
+  else
+    bundle $@
+  fi
+}
+
+#buildr
+alias bcp="rbenv shell jruby-1.6.5 && buildr clean package"
+
+alias v="mvim"
+alias r="rails"
+alias rs="rails server"
+alias m="mate"
+alias mate="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
+alias ll='ls -l'
+alias l='ls -l'
+alias la='ls -la'
+alias ..="cd .."
+
+alias emil="ssh deploy@emil.hh.blau.de"
+alias metula="ssh deploy@metula.hh.blau.de"
+alias pamir="ssh deploy@pamir.hh.blau.de"
+alias pluto="ssh deploy@pluto.hh.blau.de"
+alias kursk="ssh deploy@kursk.hh.blau.de"
+alias primus="ssh deploy@primus.hh.blau.de"
+alias hindenburg="ssh deploy@hindenburg.hh.blau.de"
+alias goya="ssh deploy@goya.hh.blau.de"
+alias titanic="ssh deploy@titanic.hh.blau.de"
+alias tirpitz="ssh deploy@tirpitz.hh.blau.de"
+alias ivy="ssh ivy@ivy"
+
+# some functions
+growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
