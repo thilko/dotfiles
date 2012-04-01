@@ -2,6 +2,7 @@
 #
 # generates a useful gitconfig stub
 
+
 set -e
 
 SCRIPTNAME=`basename $0`
