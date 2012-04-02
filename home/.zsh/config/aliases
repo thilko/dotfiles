@@ -58,3 +58,4 @@ alias ivy="ssh ivy@ivy"
 
 # some functions
 growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
+alias serve='echo "SERVING `pwd` ON http://`ifconfig -v en0 inet | grep inet | cut -d " " -f 2`:9090/" && ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap(\"INT\") { s.shutdown }; s.start"'
