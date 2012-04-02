@@ -71,3 +71,5 @@ stty stop undef
 # Includes
 for f in ~/.zsh/config/*; do source $f; done
 for f in ~/.zsh/private/*; do source $f; done
+
+[ -s "/Users/tri/.scm_breeze/scm_breeze.sh" ] && . "/Users/tri/.scm_breeze/scm_breeze.sh"
