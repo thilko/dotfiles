@@ -38,9 +38,9 @@ p() {
   fi
 }
 
-b() {
-  bundle "$@"
-}
+# b() {
+#   bundle "$@"
+# }
 
 # rename *.txt txt t2t
 # a.txt => a.t2t

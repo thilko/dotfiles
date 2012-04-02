@@ -19,10 +19,6 @@ alias rsi="be rake spec:integration"
 alias grsh="git reset --hard"
 alias guard="be guard"
 
-function be() {
-  b exec $@
-}
-
 function b() {
   if [ -e .Gemfile ]
   then
