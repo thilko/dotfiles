@@ -87,11 +87,3 @@ vcs_bracket() {
 
 PS1='%{$fg[cyan]%}%n%{$fg[green]%}:%(4~|...|)%2~%{$reset_color%}$(vcs_bracket)%(!.#.)%{$reset_color%}> '
 
-# Show RVM Gemset and ruby
-rvm_prompt_info() {
-  ruby_version=$(~/.rvm/bin/rvm-prompt 2> /dev/null) || return
-  echo "$ruby_version"
-}
-
-RPROMPT='$(rvm_prompt_info)'
-
