@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PS1="\u:\w$ "
-alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
+# alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 
 # git
 alias gca=git_commit_all
@@ -38,7 +38,7 @@ function b() {
 #buildr
 alias bcp="rbenv shell jruby-1.6.5 && buildr clean package"
 
-alias v="mvim"
+# alias v="mvim"
 alias r="rails"
 alias rs="rails server"
 alias m="mate"
