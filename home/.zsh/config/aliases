@@ -1,8 +1,3 @@
-#!/bin/bash
-
-PS1="\u:\w$ "
-# alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
-
 # git
 alias gca=git_commit_all
 alias gc="git ci -m"
