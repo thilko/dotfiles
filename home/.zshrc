@@ -1,6 +1,8 @@
 # ----------------------------------------------------------------
 # general zsh configuration
 # ----------------------------------------------------------------
+unsetopt CORRECTALL
+unsetopt CORRECT
 
 # crazy tab completion
 autoload -U compinit
