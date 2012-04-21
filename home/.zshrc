@@ -75,3 +75,4 @@ for f in ~/.zsh/private/*; do source $f; done
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
+

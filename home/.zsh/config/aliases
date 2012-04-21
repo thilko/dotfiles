@@ -22,17 +22,12 @@ alias l='ls -l'
 alias la='ls -la'
 alias ..="cd .."
 
-alias emil="ssh deploy@emil.hh.blau.de"
-alias metula="ssh deploy@metula.hh.blau.de"
-alias pamir="ssh deploy@pamir.hh.blau.de"
-alias pluto="ssh deploy@pluto.hh.blau.de"
-alias kursk="ssh deploy@kursk.hh.blau.de"
-alias primus="ssh deploy@primus.hh.blau.de"
-alias hindenburg="ssh deploy@hindenburg.hh.blau.de"
-alias goya="ssh deploy@goya.hh.blau.de"
-alias titanic="ssh deploy@titanic.hh.blau.de"
-alias tirpitz="ssh deploy@tirpitz.hh.blau.de"
 alias ivy="ssh ivy@ivy"
+
+for f in tirpitz pamir titanic metula goya primus kursk hindenburg emil; do
+  alias d@$f[1,2]="ssh deploy@$f.hh.blau.de"
+  alias b@$f[1,2]="ssh bamboo@$f.hh.blau.de"
+done
 
 # some functions
 growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
