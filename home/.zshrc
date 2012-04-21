@@ -1,14 +1,11 @@
 # ----------------------------------------------------------------
 # general zsh configuration
 # ----------------------------------------------------------------
-unsetopt CORRECTALL
-unsetopt CORRECT
-
-# crazy tab completion
 autoload -U compinit
 compinit
 
 # crazy mad shit
+unsetopt correct_all
 setopt auto_resume auto_cd auto_pushd pushd_to_home pushd_silent pushd_minus
 setopt pushd_ignore_dups bad_pattern function_argzero inc_append_history
 setopt hist_verify hist_no_store hist_no_functions

@@ -14,18 +14,6 @@ alias rsi="be rake spec:integration"
 alias grsh="git reset --hard"
 alias guard="be guard"
 
-function b() {
-  if [ -e .Gemfile ]
-  then
-    cp Gemfile Gemfile.bak
-    cat .Gemfile >> Gemfile
-    bundle $@
-    mv Gemfile.bak Gemfile
-  else
-    bundle $@
-  fi
-}
-
 #buildr
 alias bcp="rbenv shell jruby-1.6.5 && buildr clean package"
 
