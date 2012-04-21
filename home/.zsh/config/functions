@@ -1,9 +1,3 @@
-# Rails console
-rc() { bundle exec rails c }
-
-# Rails server
-# rs() { bundle exec rails s }
-
 # ps + grep
 psg() { ps auxww | grep $1 }
 

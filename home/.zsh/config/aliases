@@ -1,25 +1,20 @@
-# git
-alias gca=git_commit_all
-alias gc="git ci -m"
-alias gl="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias gpr="git pull --rebase"
 alias gprs="git pull --rebase && gps"
 alias gcpr="git_commit_prompt"
 
-# bundler
 alias b="bundle"
-alias a="bundle exec 'autotest'"
+alias be="b exec"
+alias a="be 'autotest'"
 alias s="be rake spec"
 alias rsi="be rake spec:integration"
 alias grsh="git reset --hard"
-alias guard="be guard"
 
-#buildr
 alias bcp="rbenv shell jruby-1.6.5 && buildr clean package"
 
 alias v="mvim"
 alias r="rails"
-alias rs="rails server"
+alias rs="r server"
+alias rc="r console"
 alias m="mate"
 alias mate="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
 alias ll='ls -l'
