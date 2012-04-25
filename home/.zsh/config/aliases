@@ -1,6 +1,8 @@
 alias gpr="git pull --rebase"
 alias gprs="git pull --rebase && gps"
 alias gcpr="git_commit_prompt"
+alias gsd="git svn dcommit"
+alias gsfr="git svn fetch && git svn rebase"
 
 alias b="bundle"
 alias be="b exec"
