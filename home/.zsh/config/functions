@@ -14,6 +14,10 @@ p() {
   fi
 }
 
+rspec() {
+  bundle exec rspec $@
+}
+
 # rename *.txt txt t2t
 # a.txt => a.t2t
 rename() {

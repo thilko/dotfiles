@@ -76,3 +76,5 @@ if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
+
+[ -s "/Users/tri/.scm_breeze/scm_breeze.sh" ] && source "/Users/tri/.scm_breeze/scm_breeze.sh"

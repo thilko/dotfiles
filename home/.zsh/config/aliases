@@ -1,22 +1,32 @@
+# git
+alias ts="tig status"
 alias gpr="git pull --rebase"
 alias gprs="git pull --rebase && gps"
-alias gcpr="git_commit_prompt"
 alias gsd="git svn dcommit"
 alias gsfr="git svn fetch && git svn rebase"
+alias gs="git status"
+alias grsh="git reset --hard"
+alias gl="git log"
+alias gcp="git cherry-pick"
+alias gcl="git clone"
+alias gco="git co"
 
+# bundler
 alias b="bundle"
 alias be="b exec"
 alias a="be 'autotest'"
 alias s="be rake spec"
 alias rsi="be rake spec:integration"
-alias grsh="git reset --hard"
-
 alias bcp="rbenv shell jruby-1.6.5 && buildr clean package"
+alias jruby="rbenv shell jruby-1.6.5"
 
-alias v="mvim"
+# rails
 alias r="rails"
 alias rs="r server"
 alias rc="r console"
+
+# my lovely editory
+alias v="mvim"
 alias m="mate"
 alias mate="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
 alias ll='ls -l'
@@ -24,13 +34,5 @@ alias l='ls -l'
 alias la='ls -la'
 alias ..="cd .."
 
-alias ivy="ssh ivy@ivy"
-
-for f in tirpitz pamir titanic metula goya primus kursk hindenburg emil; do
-  alias d@$f[1,2]="ssh deploy@$f.hh.blau.de"
-  alias b@$f[1,2]="ssh bamboo@$f.hh.blau.de"
-done
-
 # some functions
-growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
 alias serve='echo "SERVING `pwd` ON http://`ifconfig -v en0 inet | grep inet | cut -d " " -f 2`:9090/" && ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap(\"INT\") { s.shutdown }; s.start"'
