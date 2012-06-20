@@ -7,10 +7,11 @@ alias gps="git push"
 alias gsfr="git svn fetch && git svn rebase"
 alias gs="git status"
 alias grsh="git reset --hard"
-alias gl="git log"
+alias gl="git log --pretty=oneline --format='%ci %Cred%cn%Creset %Cgreen%T%Creset %s'"
 alias gcp="git cherry-pick"
 alias gcl="git clone"
 alias gco="git co"
+alias gd="git diff"
 
 # bundler
 alias b="bundle"
