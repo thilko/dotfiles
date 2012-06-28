@@ -16,6 +16,7 @@ alias gd="git diff"
 # bundler
 alias b="bundle"
 alias be="b exec"
+alias bu="b update"
 alias a="be 'autotest'"
 alias s="be rake spec"
 alias rsi="be rake spec:integration"
