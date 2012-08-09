@@ -19,13 +19,13 @@ rspec() {
 }
 
 gps() {
-  `git config remote.origin.url`
+  git config remote.origin.url > /dev/null
   if [ $? == 0 ]; then
-    `git push`
+    git push
   else
-    `git svn info`
+    git svn info > /dev/null
     if [ $? == 0 ]; then
-      `git svn dcommit`
+      git svn dcommit
     else
       echo "not a git repository."
     fi
