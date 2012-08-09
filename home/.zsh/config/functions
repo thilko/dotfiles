@@ -18,6 +18,20 @@ rspec() {
   bundle exec rspec $@
 }
 
+gps() {
+  `git config remote.origin.url`
+  if [ $? == 0 ]; then
+    `git push`
+  else
+    `git svn info`
+    if [ $? == 0 ]; then
+      `git svn dcommit`
+    else
+      echo "not a git repository."
+    fi
+  fi
+}
+
 # rename *.txt txt t2t
 # a.txt => a.t2t
 rename() {
