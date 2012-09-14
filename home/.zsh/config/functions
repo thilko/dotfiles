@@ -56,3 +56,33 @@ sed -i "" "s/catcher\(.*\), :path.*/catcher\1/" Gemfile
   bundle
 }
 
+switch() {
+  project_name=`svn info | grep URL | cut -d "/" -f 4`
+
+  if [[ "$0" != "0" ]]; then
+    echo "================="
+    echo "Not a SVN project"
+    echo "================="
+    return
+  fi
+
+  clean=$(svn status | wc -l)
+
+  if [[ "$clean" -gt "0" ]]; then
+    echo "=================================================================================="
+    echo "The current active branch isn't clean. Commit or revert before switching branches."
+    echo "=================================================================================="
+    return
+  fi
+
+  branch=$1
+  if [[ $branch == "" ]]; then
+    branch="trunk"
+  else
+    branch="branches/$branch"
+  fi
+
+  echo "switching '$project_name' to $branch"
+
+  svn switch --ignore-ancestry svn://svn/$project_name/$branch
+}
