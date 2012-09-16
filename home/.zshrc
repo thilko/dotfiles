@@ -1,8 +1,12 @@
 # ----------------------------------------------------------------
 # general zsh configuration
 # ----------------------------------------------------------------
+autoload login-test-server
 autoload -U compinit
 compinit
+
+zle -N login-test-server
+bindkey "^[l" login-test-server
 
 # crazy mad shit
 unsetopt correct_all
@@ -39,20 +43,20 @@ HISTFILE=~/.history
 # eliminate duplicates from these lists
 typeset -U hosts path cdpath fpath fignore manpath mailpath classpath
 
-if [ -f "$HOME/.ssh/known_hosts" ]; then
-    sshhosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*})
-fi
-if [ -f "/etc/hosts" ]; then
-    : ${(A)etchosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}}
-fi
-hosts=( $hosts $etchosts $sshhosts)
+# if [ -f "$HOME/.ssh/known_hosts" ]; then
+#     sshhosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*})
+# fi
+# if [ -f "/etc/hosts" ]; then
+#     : ${(A)etchosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}}
+# fi
+# hosts=( $hosts $etchosts $sshhosts)
+# zstyle ':completion:*:hosts' hosts $hosts
 
 # completion engine additions
 # keep cvs and *~ files out
 zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)CVS' '(|*/)*\~'
 zstyle ':completion:*:cd:*' ignored-patterns '(|*/)CVS'
 zstyle ':completion:*:kill:*:processes' command "ps x"
-zstyle ':completion:*:hosts' hosts $hosts
 zstyle -e ':completion:*:approximate:*' max-errors 'reply=( $(( ($#PREFIX + $#SUFFIX) / 3 )) )'
 zstyle ':completion:*:descriptions' format "- %d -"
 zstyle ':completion:*:corrections' format "- %d - (errors %e})"
@@ -76,5 +80,3 @@ if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
-
-[ -s "/Users/tri/.scm_breeze/scm_breeze.sh" ] && source "/Users/tri/.scm_breeze/scm_breeze.sh"
