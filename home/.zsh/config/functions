@@ -86,3 +86,8 @@ switch() {
 
   svn switch --ignore-ancestry svn://svn/$project_name/$branch
 }
+
+
+function gm(){
+  say -v Zarvox "good morning $1.How are you today?"
+}
