@@ -80,3 +80,5 @@ if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
+source /usr/local/share/chruby/chruby.sh
+chruby ruby-2.1.0
