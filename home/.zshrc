@@ -81,4 +81,6 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 fi
 
 source /usr/local/share/chruby/chruby.sh
-chruby ruby-2.1.0
+chruby ruby-2.1.2
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+PATH=/Users/thilko/.gem/ruby/2.1.2/bin:/Users/thilko/.rubies/ruby-2.1.2/lib/ruby/gems/2.1.2/bin:/Users/thilko/.rubies/ruby-2.1.2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/MacGPG2/bin:/Users/thilko/Library/grails-2.4.3/bin:~/Library/grails-2.4.3/bin

@@ -11,6 +11,7 @@ alias gcp="git cherry-pick"
 alias gcl="git clone"
 alias gco="git co"
 alias gd="git diff"
+alias g="git"
 
 # bundler
 alias b="bundle"
