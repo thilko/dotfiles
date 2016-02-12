@@ -1,5 +1,0 @@
-function login-test-server(){
-  BUFFER="ssh deploy@$LBUFFER"
-  zle -R
-  zle end-of-line
-}
