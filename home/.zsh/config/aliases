@@ -20,19 +20,12 @@ alias bu="b update"
 alias a="be 'autotest'"
 alias s="be rake spec"
 alias rsi="be rake spec:integration"
-alias bcp="rbenv shell jruby-1.6.5 && buildr clean package"
-alias jruby="rbenv shell jruby-1.6.5"
-alias mri="rbenv shell 1.9.3-p125-perf"
 
 # rails
 alias r="rails"
 alias rs="r server"
 alias rc="r console"
 
-# my lovely editory
-alias v="mvim"
-alias m="mate"
-alias mate="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
 alias ll='ls -l'
 alias l='ls -l'
 alias la='ls -la'
