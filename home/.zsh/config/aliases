@@ -2,8 +2,6 @@
 alias ts="tig status"
 alias gpr="git pull --rebase"
 alias gprs="git pull --rebase && gps"
-alias gsd="git svn dcommit"
-alias gsfr="git svn fetch && git svn rebase"
 alias gs="git status"
 alias grsh="git reset --hard"
 alias gl="git lg"
@@ -31,7 +29,5 @@ alias l='ls -l'
 alias la='ls -la'
 alias ..="cd .."
 
-# some functions
-alias serve='echo "SERVING `pwd` ON http://`ifconfig -v en0 inet | grep inet | cut -d " " -f 2`:9090/" && ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap(\"INT\") { s.shutdown }; s.start"'
-
 alias -s git="git clone $1"
+alias -g L="| less"
