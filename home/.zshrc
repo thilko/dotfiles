@@ -76,7 +76,4 @@ stty stop undef
 for f in ~/.zsh/config/*; do source $f; done
 for f in ~/.zsh/private/*; do source $f; done
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source /usr/local/share/chruby/chruby.sh
-chruby ruby-2.1.2
