@@ -31,3 +31,5 @@ alias ..="cd .."
 
 alias -s git="git clone $1"
 alias -g L="| less"
+
+alias j="autojump"
