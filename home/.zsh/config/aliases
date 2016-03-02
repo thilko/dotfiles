@@ -31,3 +31,6 @@ alias ..="cd .."
 
 alias -s git="git clone $1"
 alias -g L="| less"
+
+alias grcb="./gradlew clean build"
+alias gr="./gradlew"
