@@ -1,0 +1,47 @@
+(function() {
+  var EditorElement;
+
+  module.exports = EditorElement = (function() {
+    function EditorElement(options) {
+      this.element = document.createElement('div');
+      this.message = document.createElement('div');
+      this.message.classList.add('message');
+      this.message.textContent = (options != null ? options.label : void 0) || '';
+      this.element.appendChild(this.message);
+      this.editor = document.createElement('atom-text-editor');
+      this.editor.setAttribute('mini', true);
+      this.editor.getModel().setText((options != null ? options.text : void 0) || '');
+      this.element.appendChild(this.editor);
+      atom.commands.add(this.editor, 'core:confirm', (function(_this) {
+        return function() {};
+      })(this));
+      atom.commands.add(this.editor, 'core:cancel', (function(_this) {
+        return function() {};
+      })(this));
+    }
+
+    EditorElement.prototype.focus = function() {
+      return this.editor.focus();
+    };
+
+    EditorElement.prototype.serialize = function() {
+      return this.editor.getModel().getText();
+    };
+
+    EditorElement.prototype.destroy = function() {
+      return this.element.remove();
+    };
+
+    EditorElement.prototype.getElement = function() {
+      return this.element;
+    };
+
+    return EditorElement;
+
+  })();
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAiZmlsZSI6ICIiLAogICJzb3VyY2VSb290IjogIiIsCiAgInNvdXJjZXMiOiBbCiAgICAiL1VzZXJzL3RoaWxrby8uYXRvbS9wYWNrYWdlcy9jeWJlci1kb2pvL2xpYi92aWV3L2VkaXRvci1lbGVtZW50LmNvZmZlZSIKICBdLAogICJuYW1lcyI6IFtdLAogICJtYXBwaW5ncyI6ICJBQUFBO0FBQUEsTUFBQSxhQUFBOztBQUFBLEVBQUEsTUFBTSxDQUFDLE9BQVAsR0FDTTtBQUNTLElBQUEsdUJBQUMsT0FBRCxHQUFBO0FBQ1gsTUFBQSxJQUFDLENBQUEsT0FBRCxHQUFXLFFBQVEsQ0FBQyxhQUFULENBQXVCLEtBQXZCLENBQVgsQ0FBQTtBQUFBLE1BR0EsSUFBQyxDQUFBLE9BQUQsR0FBVyxRQUFRLENBQUMsYUFBVCxDQUF1QixLQUF2QixDQUhYLENBQUE7QUFBQSxNQUlBLElBQUMsQ0FBQSxPQUFPLENBQUMsU0FBUyxDQUFDLEdBQW5CLENBQXVCLFNBQXZCLENBSkEsQ0FBQTtBQUFBLE1BS0EsSUFBQyxDQUFBLE9BQU8sQ0FBQyxXQUFULHNCQUF1QixPQUFPLENBQUUsZUFBVCxJQUFrQixFQUx6QyxDQUFBO0FBQUEsTUFNQSxJQUFDLENBQUEsT0FBTyxDQUFDLFdBQVQsQ0FBcUIsSUFBQyxDQUFBLE9BQXRCLENBTkEsQ0FBQTtBQUFBLE1BU0EsSUFBQyxDQUFBLE1BQUQsR0FBVSxRQUFRLENBQUMsYUFBVCxDQUF1QixrQkFBdkIsQ0FUVixDQUFBO0FBQUEsTUFVQSxJQUFDLENBQUEsTUFBTSxDQUFDLFlBQVIsQ0FBcUIsTUFBckIsRUFBNkIsSUFBN0IsQ0FWQSxDQUFBO0FBQUEsTUFXQSxJQUFDLENBQUEsTUFBTSxDQUFDLFFBQVIsQ0FBQSxDQUFrQixDQUFDLE9BQW5CLG9CQUEyQixPQUFPLENBQUUsY0FBVCxJQUFpQixFQUE1QyxDQVhBLENBQUE7QUFBQSxNQVlBLElBQUMsQ0FBQSxPQUFPLENBQUMsV0FBVCxDQUFxQixJQUFDLENBQUEsTUFBdEIsQ0FaQSxDQUFBO0FBQUEsTUFlQSxJQUFJLENBQUMsUUFBUSxDQUFDLEdBQWQsQ0FBa0IsSUFBQyxDQUFBLE1BQW5CLEVBQTJCLGNBQTNCLEVBQTJDLENBQUEsU0FBQSxLQUFBLEdBQUE7ZUFBQSxTQUFBLEdBQUEsRUFBQTtNQUFBLENBQUEsQ0FBQSxDQUFBLElBQUEsQ0FBM0MsQ0FmQSxDQUFBO0FBQUEsTUFnQkEsSUFBSSxDQUFDLFFBQVEsQ0FBQyxHQUFkLENBQWtCLElBQUMsQ0FBQSxNQUFuQixFQUEyQixhQUEzQixFQUEwQyxDQUFBLFNBQUEsS0FBQSxHQUFBO2VBQUEsU0FBQSxHQUFBLEVBQUE7TUFBQSxDQUFBLENBQUEsQ0FBQSxJQUFBLENBQTFDLENBaEJBLENBRFc7SUFBQSxDQUFiOztBQUFBLDRCQW9CQSxLQUFBLEdBQU8sU0FBQSxHQUFBO2FBQ0wsSUFBQyxDQUFBLE1BQU0sQ0FBQyxLQUFSLENBQUEsRUFESztJQUFBLENBcEJQLENBQUE7O0FBQUEsNEJBd0JBLFNBQUEsR0FBVyxTQUFBLEdBQUE7YUFDVCxJQUFDLENBQUEsTUFBTSxDQUFDLFFBQVIsQ0FBQSxDQUFrQixDQUFDLE9BQW5CLENBQUEsRUFEUztJQUFBLENBeEJYLENBQUE7O0FBQUEsNEJBNEJBLE9BQUEsR0FBUyxTQUFBLEdBQUE7YUFDUCxJQUFDLENBQUEsT0FBTyxDQUFDLE1BQVQsQ0FBQSxFQURPO0lBQUEsQ0E1QlQsQ0FBQTs7QUFBQSw0QkErQkEsVUFBQSxHQUFZLFNBQUEsR0FBQTthQUNWLElBQUMsQ0FBQSxRQURTO0lBQUEsQ0EvQlosQ0FBQTs7eUJBQUE7O01BRkYsQ0FBQTtBQUFBIgp9
+
+//# sourceURL=/Users/thilko/.atom/packages/cyber-dojo/lib/view/editor-element.coffee

@@ -1,0 +1,1 @@
+{"context-menu":{"atom-text-editor":[{"label":"Run tests for Cyber-Dojo","command":"cyber-dojo:run-tests"}]},"menu":[{"label":"Packages","submenu":[{"label":"Cyber-Dojo","submenu":[{"label":"Enter URL","command":"cyber-dojo:url"},{"label":"Run tests","command":"cyber-dojo:run-tests"}]}]}]}
