@@ -1,0 +1,6 @@
+.DS_Store
+*.tmproj
+*.iml
+.idea
+.zsh-update
+doc/tags*
