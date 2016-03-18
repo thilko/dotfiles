@@ -10,25 +10,44 @@
 [layouts]
   [[default]]
     [[[child0]]]
-      position = 2340:24
+      position = 1977:21
       type = Window
       order = 0
       parent = ""
-      size = 900, 600
+      size = 1863, 1059
     [[[child1]]]
-      position = 514
+      position = 541
       type = VPaned
       order = 0
       parent = child0
+    [[[child2]]]
+      position = 932
+      type = HPaned
+      order = 0
+      parent = child1
+    [[[child5]]]
+      position = 932
+      type = HPaned
+      order = 1
+      parent = child1
     [[[terminal3]]]
       profile = default
       type = Terminal
-      order = 1
-      parent = child1
-    [[[terminal2]]]
+      order = 0
+      parent = child2
+    [[[terminal4]]]
       profile = default
-      group = sdadad
+      type = Terminal
+      order = 1
+      parent = child2
+    [[[terminal7]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child5
+    [[[terminal6]]]
+      profile = default
       type = Terminal
       order = 0
-      parent = child1
+      parent = child5
 [plugins]
