@@ -76,3 +76,5 @@ stty stop undef
 # Includes
 for f in ~/.zsh/config/*; do source $f; done
 
+# start tmux
+[[ $TERM != "screen" ]] && exec tmux
