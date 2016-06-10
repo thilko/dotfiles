@@ -1,4 +1,5 @@
 if [[ "Linux" == `uname` ]]
 then
 	. /usr/share/autojump/autojump.zsh
+
 fi
