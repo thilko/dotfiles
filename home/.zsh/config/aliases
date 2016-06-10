@@ -19,11 +19,6 @@ alias a="be 'autotest'"
 alias s="be rake spec"
 alias rsi="be rake spec:integration"
 
-# rails
-alias r="rails"
-alias rs="r server"
-alias rc="r console"
-
 alias ll='ls -l'
 alias l='ls -l'
 alias la='ls -la'
@@ -34,3 +29,6 @@ alias -g L="| less"
 
 alias grcb="./gradlew clean build"
 alias gr="./gradlew"
+
+alias h="homesick"
+
