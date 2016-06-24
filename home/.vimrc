@@ -11,7 +11,11 @@ syntax on
 set lines=70
 set columns=135
 
-"set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+set rtp+=/path/to/lightline
+set laststatus=2
+let g:lightline = { 'colorscheme': 'jellybeans' }
+
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 " | | | | | | | | | | |
 " " | | | | | | | | | | + current
 " " | | | | | | | | | | column
@@ -41,7 +45,7 @@ set columns=135
 " T - trunctate other messages in the middle if they are too long to fit on
 " the command line. "..." will appear in the middle.
 " I - don't give the intro message when starting Vim.
-"set shortmess=filmnrxtTI
+set shortmess=filmnrxtTI
 
 colorscheme twilight
 
@@ -118,3 +122,4 @@ set showmatch                      " Show matching bracket
 
 " Clipboard
 set clipboard=unnamed              " use the system clipboard
+
