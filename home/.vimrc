@@ -1,3 +1,8 @@
+set nocompatible
+
+" use pathogen to load plugins/etc.
+execute pathogen#infect()
+
 runtime! config/*
 runtime! config/plugins/*
 
@@ -6,7 +11,7 @@ syntax on
 set lines=70
 set columns=135
 
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+"set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 " | | | | | | | | | | |
 " " | | | | | | | | | | + current
 " " | | | | | | | | | | column
@@ -36,7 +41,7 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 " T - trunctate other messages in the middle if they are too long to fit on
 " the command line. "..." will appear in the middle.
 " I - don't give the intro message when starting Vim.
-set shortmess=filmnrxtTI
+"set shortmess=filmnrxtTI
 
 colorscheme twilight
 
@@ -70,7 +75,7 @@ filetype plugin on                 " Enable filetype-specific plugins
 set autoread
 
 " Location
-set ruler                           " Show the line number on the bar
+"set ruler                           " Show the line number on the bar
 set number                          " Line numbers
 set title                           " show file in titlebar
 set ttyfast
