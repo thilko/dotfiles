@@ -38,7 +38,7 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 " I - don't give the intro message when starting Vim.
 set shortmess=filmnrxtTI
 
-colorscheme desert
+colorscheme twilight
 
 " Environment
 set history=200                        " Set history to 200
