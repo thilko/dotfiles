@@ -1,0 +1,21 @@
+[submodule "home/.vim/bundle/nerdtree"]
+	path = home/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "home/.vim/bundle/mru"]
+	path = home/.vim/bundle/mru
+	url = https://github.com/vim-scripts/mru.vim.git
+[submodule "home/.vim/bundle/syntastic"]
+	path = home/.vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "home/.vim/bundle/ctrlp"]
+	path = home/.vim/bundle/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "home/.vim/bundle/vim-expand-region"]
+	path = home/.vim/bundle/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
+[submodule "home/.vim/bundle/ag"]
+	path = home/.vim/bundle/ag
+	url = https://github.com/rking/ag.vim.git
+[submodule "home/.vim/bundle/greplace"]
+	path = home/.vim/bundle/greplace
+	url = https://github.com/vim-scripts/greplace.vim.git
