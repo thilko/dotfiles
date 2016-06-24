@@ -2,7 +2,6 @@ runtime! config/*
 runtime! config/plugins/*
 
 syntax on
-set nocompatible
 
 set lines=70
 set columns=135
@@ -39,11 +38,12 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 " I - don't give the intro message when starting Vim.
 set shortmess=filmnrxtTI
 
+colorscheme desert
+
 " Environment
 set history=200                        " Set history to 200
 set undolevels=1000                    " Set undos to 1000
 set autoread                           " Watch for file changes
-set ttyfast                            " We have a fast terminal
 set wildmenu                           " completion with menu
 set wildmode=longest,list              " bash-like tab completion
 set completeopt=menu,preview,longest   " complete options
@@ -58,10 +58,6 @@ set visualbell
 set nobackup                       " Just don't backup
 set nowritebackup                  " No write backups
 set noswapfile                     " And no swap files
-set nowrap
-
-" no messages
-set shortmess=atI
 
 " set tags file
 set tags^=./tags
@@ -73,24 +69,12 @@ filetype plugin on                 " Enable filetype-specific plugins
 
 set autoread
 
-" show invisable characters
-set list
-set listchars=tab:▸\ ,trail:-        " Use TextMate symbols for tabstops and EOLs
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
-
 " Location
 set ruler                           " Show the line number on the bar
 set number                          " Line numbers
-set cul                             " Highlight current line
 set title                           " show file in titlebar
 set ttyfast
 set t_ti= t_te=                     " do not clear the screen when vim ends
-
-set background=dark
-let g:solarized_contrast="high" "default value is normal
-let g:solarized_hitrail=1 "default value is 0
-colorscheme railscasts
 
 " Typing
 set autoindent                     " Who doesn't like autoindent?
@@ -99,10 +83,6 @@ set showmatch                      " Show matching brackets
 set ts=2 sts=2 sw=2 expandtab      " Tabs and spaces
 set scrolloff=3
 set whichwrap+=<,>,h,l
-
-" Disable ESC key delay in insert mode
-" http://ksjoberg.com/vim-esckeys.html
-set noesckeys
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
@@ -133,11 +113,3 @@ set showmatch                      " Show matching bracket
 
 " Clipboard
 set clipboard=unnamed              " use the system clipboard
-
-" Autocmd
-au BufWritePost .gvimrc so ~/.gvimrc
-
-if has("gui_running")
-  set guifont=Inconsolata-dz:h12.0
-  set guioptions=ac
-endif
