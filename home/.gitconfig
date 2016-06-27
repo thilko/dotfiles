@@ -1,0 +1,47 @@
+[include]
+          path = ~/.gitidentity
+[github]
+          user = thilko
+                  token = 896af5ea1ed34bf260cb00b5353b5a47
+[color]
+          diff = auto
+                  status = auto
+                          branch = auto
+                                  interactive = auto
+                                          ui = true
+                                                  pager = true
+
+[color "branch"]
+          current = yellow reverse
+                  local = yellow
+                          remote = green
+
+[color "diff"]
+          meta = yellow bold
+                  frag = magenta bold
+                          old = red bold
+                                  new = green bold
+
+[color "status"]
+          added = yellow
+                  changed = green
+                          untracked = cyan
+[merge]
+          tool = opendiff
+[core]
+          excludesfile = ~/.gitignore
+                  editor = "vim -u NONE -N -c 'startinsert'"
+[alias]
+    ps = push
+      br = branch
+        pr = pull --rebase
+          rh = reset --hard
+                  st = status
+                          ci = commit
+                                  co = checkout
+                                          lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset(%cn)' --abbrev-commit
+                                                  cp = cherry-pick
+[push]
+    default = upstream
+[credential]
+    helper = cache
