@@ -11,7 +11,7 @@ syntax on
 set lines=70
 set columns=135
 
-set rtp+=/path/to/lightline
+"set rtp+=/path/to/lightline
 set laststatus=2
 let g:lightline = { 'colorscheme': 'jellybeans' }
 
