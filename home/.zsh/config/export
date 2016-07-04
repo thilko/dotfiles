@@ -9,3 +9,5 @@ export REPORTTIME=1
 
 # Manpager with ascii-sequences
 export MANPAGER=more
+
+export EDITOR=vim
