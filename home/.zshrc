@@ -77,4 +77,5 @@ stty stop undef
 for f in ~/.zsh/config/*; do source $f; done
 
 # start tmux
-[[ $TERM != "screen" ]] && exec tmux
+export TERM='xterm-256color'
+if [ "$TMUX" = "" ]; then tmux -2 ; fi

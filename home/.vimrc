@@ -11,7 +11,6 @@ syntax on
 set lines=70
 set columns=135
 
-"set rtp+=/path/to/lightline
 set laststatus=2
 let g:lightline = { 'colorscheme': 'jellybeans' }
 
@@ -48,6 +47,8 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 set shortmess=filmnrxtTI
 
 colorscheme twilight
+let g:rehash256=1
+set t_Co=256
 
 " Environment
 set history=200                        " Set history to 200
