@@ -94,6 +94,8 @@ set ts=2 sts=2 sw=2 expandtab      " Tabs and spaces
 set scrolloff=3
 set whichwrap+=<,>,h,l
 
+let NERDTreeShowHidden=1
+
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
 " Stolen from http://stackoverflow.com/a/5403847/171364 (janus repo)
