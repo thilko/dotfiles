@@ -32,15 +32,16 @@
           excludesfile = ~/.gitignore
                   editor = "vim -u NONE -N -c 'startinsert'"
 [alias]
-    ps = push
-      br = branch
-        pr = pull --rebase
-          rh = reset --hard
-                  st = status
-                          ci = commit
-                                  co = checkout
-                                          lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset(%cn)' --abbrev-commit
-                                                  cp = cherry-pick
+  ps = push
+  br = branch
+  pr = pull --rebase
+  pl = pull
+  rh = reset --hard
+  st = status
+  ci = commit
+  co = checkout
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset(%cn)' --abbrev-commit
+  cp = cherry-pick
 [push]
     default = upstream
 [credential]
