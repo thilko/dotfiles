@@ -18,3 +18,5 @@ let g:syntastic_mode_map = {'active_filetypes': [], 'mode': 'active', 'passive_f
 if &diff
 let g:syntastic_auto_loc_list=2
 endif
+
+let g:syntastic_cpp_config_file = '.syntastic'
