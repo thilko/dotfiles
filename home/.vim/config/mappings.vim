@@ -5,7 +5,7 @@ map <leader>m :CtrlP<CR>
 map . .[                           " set the cursor to the start of each change
 map <leader>cc :ClearCtrlPCache<CR>
 map <leader>d :NERDTreeToggle<CR>
-
+map <leader>r :!g++ -std=c++11 -isystem googletest/googletest/include -pthread sampling_test.cc libgtest.a -o your_test && ./your_test -outputter/buffer/into 1 -mode n<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>q :q<CR>
 nmap <leader>qa :BufOnly NERD_tree_1<CR> " close all buffers except nerdtree
