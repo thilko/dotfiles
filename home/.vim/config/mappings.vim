@@ -34,3 +34,4 @@ nnoremap <leader>sv :so $MYVIMRC<CR>
 
 imap jj <ESC> # leave insert mode
 
+nnoremap <F5> :call VimWriteRoom()<CR>
