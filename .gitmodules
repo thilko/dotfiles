@@ -25,3 +25,6 @@
 [submodule "home/.vim/bundle/vim-commentary"]
 	path = home/.vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule "home/.vim/bundle/vim-writeroom"]
+	path = home/.vim/bundle/vim-writeroom
+	url = https://github.com/jamestomasino/vim-writeroom.git
