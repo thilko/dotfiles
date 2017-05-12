@@ -1,4 +1,4 @@
-# ----------------------------------------------------------------
+
 # general zsh configuration
 # ----------------------------------------------------------------
 autoload login-test-server
@@ -79,3 +79,5 @@ for f in ~/.zsh/config/*; do source $f; done
 # start tmux
 export TERM='xterm-256color'
 if [ "$TMUX" = "" ]; then tmux -2 ; fi
+
+source /usr/local/share/chruby/chruby.sh
