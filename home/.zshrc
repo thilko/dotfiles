@@ -11,6 +11,9 @@ bindkey "^[l" login-test-server
 # crazy mad shit
 unsetopt correct_all
 unsetopt correct
+unsetopt bgnice nomatch
+unsetopt SHARE_HISTORY # share history between sessions ???
+
 setopt auto_resume auto_cd auto_pushd pushd_to_home pushd_silent pushd_minus
 setopt pushd_ignore_dups bad_pattern function_argzero inc_append_history
 setopt hist_verify hist_no_store hist_no_functions
@@ -18,14 +21,12 @@ setopt hist_ignore_dups hist_find_no_dups hist_save_no_dups
 setopt nobeep extended_glob prompt_subst interactive_comments
 setopt list_types list_packed print_eight_bit nohup notify
 setopt print_exit_value
-unsetopt bgnice nomatch
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
 setopt NO_LIST_BEEP
 setopt LOCAL_OPTIONS # allow functions to have local options
 setopt LOCAL_TRAPS # allow functions to have local traps
 setopt HIST_VERIFY
-unsetopt SHARE_HISTORY # share history between sessions ???
 setopt EXTENDED_HISTORY # add timestamps to history
 setopt PROMPT_SUBST
 setopt CORRECT
