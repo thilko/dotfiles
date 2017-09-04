@@ -1,0 +1,7 @@
+#!/usr/local/bin/zsh
+
+# enable touch to click on sierra
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+
+# increase mouse speed
+defaults write -g com.apple.mouse.scaling 5.0
