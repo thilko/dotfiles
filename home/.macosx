@@ -5,3 +5,9 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 
 # increase mouse speed
 defaults write -g com.apple.mouse.scaling 5.0
+
+# autohide the dock
+defaults write com.apple.Dock autohide -bool TRUE
+
+# set dock animation
+defaults write com.apple.dock autohide-time-modifier -float 1.2
