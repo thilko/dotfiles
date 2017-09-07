@@ -31,4 +31,4 @@ alias grcb="./gradlew clean build"
 alias gr="./gradlew"
 
 alias h="homesick"
-alias v=gvim
+alias v=nvim
