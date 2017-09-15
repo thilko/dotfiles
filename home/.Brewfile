@@ -16,6 +16,8 @@ cask "keepassx"
 cask "tunnelblick"
 cask "visual-studio-code"
 
+mas "twitter", id: 409789998
+
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
@@ -34,4 +36,5 @@ brew "docker"
 brew "yarn"
 brew "neovim"
 brew "yarn"
-
+brew "tig"
+brew "mas"
