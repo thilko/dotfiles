@@ -79,7 +79,9 @@ for f in ~/.zsh/config/*; do source $f; done
 
 # start tmux
 export TERM='xterm-256color'
-if [ "$TMUX" = "" ]; then tmux -2 ; fi
+if [ "$TMUX" = "" ]; then 
+ tmux -2 new-session \; split-window -h \; split-window -v \; attach 
+fi
 
 source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.4.1
