@@ -1,36 +1,36 @@
 [include]
-          path = ~/.gitidentity
+  path = ~/.gitidentity
 [github]
-          user = thilko
-                  token = 896af5ea1ed34bf260cb00b5353b5a47
+  user = thilko
+  token = 896af5ea1ed34bf260cb00b5353b5a47
 [color]
-          diff = auto
-                  status = auto
-                          branch = auto
-                                  interactive = auto
-                                          ui = true
-                                                  pager = true
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 
 [color "branch"]
-          current = yellow reverse
-                  local = yellow
-                          remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 
 [color "diff"]
-          meta = yellow bold
-                  frag = magenta bold
-                          old = red bold
-                                  new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 
 [color "status"]
-          added = yellow
-                  changed = green
-                          untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
 [merge]
-          tool = opendiff
+  tool = opendiff
 [core]
-          excludesfile = ~/.gitignore
-                  editor = "vim -u NONE -N -c 'startinsert'"
+  excludesfile = ~/.gitignore
+  editor = "vim -u NONE -N -c 'startinsert'"
 [alias]
   ps = push
   br = branch
@@ -43,13 +43,13 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset(%cn)' --abbrev-commit
   cp = cherry-pick
 [push]
-    default = upstream
+  default = upstream
 [credential]
-    helper = cache
+  helper = cache
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
 [user]
-	name = Thilko Richter
-	email = me@thilko.com
+  name = Thilko Richter
+  email = me@thilko.com

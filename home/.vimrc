@@ -8,9 +8,6 @@ runtime! config/plugins/*
 
 syntax on
 
-set lines=70
-set columns=135
-
 set laststatus=2
 let g:lightline = { 'colorscheme': 'jellybeans' }
 
@@ -46,8 +43,13 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 " I - don't give the intro message when starting Vim.
 set shortmess=filmnrxtTI
 
-colorscheme twilight256
-let g:rehash256=1
+syntax enable
+set background=dark
+colorscheme solarized
+
+set guifont=Inconsolata
+
+" let g:rehash256=1
 set t_Co=256
 
 " Environment
