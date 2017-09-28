@@ -37,3 +37,5 @@ brew "tig"
 brew "mas"
 brew "reattach-to-user-namespace"
 brew "autojump"
+
+mas "Twitter", id: 409789998

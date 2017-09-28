@@ -5,3 +5,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # install gems
 gem install homesick timetrap
+
+# change default shell
+chsh -s $(which zsh)
+
+# setup dotfiles
+homesick clone https://github.com/thilko/dotfiles.git dotfiles
+homesick link dotfiles

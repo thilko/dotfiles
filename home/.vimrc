@@ -47,7 +47,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-set guifont=Inconsolata
+set guifont=Inconsolata:14
 
 " let g:rehash256=1
 set t_Co=256
