@@ -11,3 +11,8 @@ defaults write com.apple.Dock autohide -bool TRUE
 
 # set dock animation
 defaults write com.apple.dock autohide-time-modifier -float 1.2
+
+# make Library visible
+chflags nohidden ~/Library
+
+defaults write -g AppleShowAllExtensions -bool true
