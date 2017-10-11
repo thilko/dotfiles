@@ -85,4 +85,5 @@ fi
 
 source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.4.1
+
 alias vpn-manager='docker run --rm -v $(pwd):/certs -v $(pwd):/user_certs 419003778484.dkr.ecr.eu-central-1.amazonaws.com/vpn-manager:latest'

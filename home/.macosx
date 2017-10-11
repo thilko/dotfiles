@@ -16,3 +16,7 @@ defaults write com.apple.dock autohide-time-modifier -float 1.2
 chflags nohidden ~/Library
 
 defaults write -g AppleShowAllExtensions -bool true
+
+# keyboard settings
+defaults write -g InitialKeyRepeat -int 2
+defaults write -g KeyRepeat -int 1

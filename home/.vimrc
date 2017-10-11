@@ -44,8 +44,16 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 set shortmess=filmnrxtTI
 
 syntax enable
-set background=dark
-colorscheme solarized
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+  set background=dark
+  colorscheme solarized
+  set guioptions-=T
+  set guioptions-=e
+  set t_Co=256
+  set guitablabel=%M\ %t
+endif
 
 set guifont=Inconsolata:14
 
