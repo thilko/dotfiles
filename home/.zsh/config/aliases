@@ -26,4 +26,4 @@ alias gr="./gradlew"
 alias h="homesick"
 alias v=nvim
 
-function post(){ http -a $1 -f POST $2 < $3 Content-Type:application/json }
+function post(){ http --verbose -a $1 -f POST $2 < $3 Content-Type:application/json }
