@@ -44,14 +44,14 @@ HISTFILE=~/.history
 # eliminate duplicates from these lists
 typeset -U hosts path cdpath fpath fignore manpath mailpath classpath
 
-# if [ -f "$HOME/.ssh/known_hosts" ]; then
-#     sshhosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*})
-# fi
-# if [ -f "/etc/hosts" ]; then
-#     : ${(A)etchosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}}
-# fi
-# hosts=( $hosts $etchosts $sshhosts)
-# zstyle ':completion:*:hosts' hosts $hosts
+if [ -f "$HOME/.ssh/known_hosts" ]; then
+    sshhosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*})
+fi
+if [ -f "/etc/hosts" ]; then
+    : ${(A)etchosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}}
+fi
+hosts=( $hosts $etchosts $sshhosts)
+zstyle ':completion:*:hosts' hosts $hosts
 
 # completion engine additions
 # keep cvs and *~ files out
@@ -77,11 +77,7 @@ stty stop undef
 # Includes
 for f in ~/.zsh/config/*; do source $f; done
 
-# start tmux
 export TERM='xterm-256color'
-if [ "$TMUX" = "" ]; then 
- tmux -2 new-session \; split-window -h \; split-window -v \; attach 
-fi
 
 source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.4.1
