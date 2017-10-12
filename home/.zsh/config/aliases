@@ -1,5 +1,6 @@
 # git
 alias ts="tig status"
+alias gpl="git pull"
 alias gpr="git pull --rebase"
 alias gprs="git pull --rebase && gps"
 alias gs="git status"
