@@ -16,6 +16,7 @@ cask "keepassx"
 cask "tunnelblick"
 cask "visual-studio-code"
 cask "macvim"
+cask "openoffice"
 
 brew "zsh"
 brew "zsh-completions"
@@ -38,5 +39,7 @@ brew "mas"
 brew "reattach-to-user-namespace"
 brew "autojump"
 brew "httpie"
+brew "python"
+brew "groovysdk"
 
 mas "Twitter", id: 409789998
