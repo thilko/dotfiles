@@ -1,5 +1,6 @@
 # git
 alias ts="tig status"
+alias="git push"
 alias gpl="git pull"
 alias gpr="git pull --rebase"
 alias gprs="git pull --rebase && gps"
@@ -10,6 +11,7 @@ alias gcp="git cherry-pick"
 alias gcl="git clone"
 alias gco="git co"
 alias gd="git diff"
+alias gba="git branch -a"
 alias g="git"
 alias gprq='open "$(git config --get "remote.origin.url" | sed -En "s/(git|https?)(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\4\/\5/p")/compare/$(git-branch-current 2> /dev/null)?expand=1"'
 
