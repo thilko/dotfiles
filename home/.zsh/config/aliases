@@ -12,6 +12,7 @@ alias gcl="git clone"
 alias gco="git co"
 alias gd="git diff"
 alias gba="git branch -a"
+alias gps="pit push"
 alias g="git"
 alias gprq='open "$(git config --get "remote.origin.url" | sed -En "s/(git|https?)(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\4\/\5/p")/compare/$(git-branch-current 2> /dev/null)?expand=1"'
 
@@ -27,5 +28,6 @@ alias grcb="./gradlew clean build"
 alias gr="./gradlew"
 
 alias h="homesick"
+alias c="code"
 
 function post(){ http --verbose -a $1 -f POST $2 < $3 Content-Type:application/json }
