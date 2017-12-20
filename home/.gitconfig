@@ -43,7 +43,7 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset(%cn)' --abbrev-commit
   cp = cherry-pick
 [push]
-  default = upstream
+	default = current
 [credential]
   helper = cache
 [filter "lfs"]
