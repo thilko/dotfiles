@@ -20,7 +20,8 @@ cask "macvim"
 cask "openoffice"
 cask "wireshark"
 cask "dbeaver-community"
-cask "cord"
+cask "gpg-suite"
+cask "font-mononoki"
 
 brew "zsh"
 brew "zsh-completions"
@@ -47,5 +48,7 @@ brew "python"
 brew "groovysdk"
 brew "packer"
 brew "ansible"
+brew "hub"
+brew "p7zip"
 
 mas "Twitter", id: 409789998

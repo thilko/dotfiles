@@ -21,7 +21,7 @@ setopt hist_ignore_dups hist_find_no_dups hist_save_no_dups
 setopt nobeep extended_glob prompt_subst interactive_comments
 setopt list_types list_packed print_eight_bit nohup notify
 setopt print_exit_value
-setopt NO_BG_NICE # don't nice background tasks
+setopt NO_BG_NICE 
 setopt NO_HUP
 setopt NO_LIST_BEEP
 setopt LOCAL_OPTIONS # allow functions to have local options
@@ -77,9 +77,17 @@ stty stop undef
 # Includes
 for f in ~/.zsh/config/*; do source $f; done
 
-export TERM='xterm-256color'
+# export TERM='xterm-256color'
 
 source /usr/local/share/chruby/chruby.sh
 chruby ruby-2.4.1
 
 alias vpn-manager='docker run --rm -v $(pwd):/certs -v $(pwd):/user_certs 419003778484.dkr.ecr.eu-central-1.amazonaws.com/vpn-manager:latest'
+
+if [[ "$TMUX" == "" ]]; then
+  if tmux has-session -t dev; then
+    tmux -2 attach-session -t dev
+  else
+    tmux -2 new-session -s dev
+  fi
+fi
