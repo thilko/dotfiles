@@ -1,7 +1,7 @@
 cask_args appdir: "/Applications"
 
 cask "google-chrome"
-cask "firefox"
+cask "firefox-developer-edition"
 cask "iterm2"
 cask "intellij-idea"
 cask "java"

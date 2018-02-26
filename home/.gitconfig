@@ -31,6 +31,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = "vim -u NONE -N -c 'startinsert'"
+	autocrlf = input
 [alias]
   ps = push
   br = branch
