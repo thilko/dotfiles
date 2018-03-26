@@ -50,5 +50,6 @@ brew "packer"
 brew "ansible"
 brew "hub"
 brew "p7zip"
+brew "jq"
 
 mas "Twitter", id: 409789998
