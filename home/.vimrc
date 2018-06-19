@@ -138,3 +138,4 @@ set showmatch                      " Show matching bracket
 " Clipboard
 " set clipboard=unnamed              " use the system clipboard
 set clipboard=unnamedplus          " ... for linux
+

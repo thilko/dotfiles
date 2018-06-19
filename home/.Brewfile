@@ -53,3 +53,4 @@ brew "p7zip"
 brew "jq"
 
 mas "Twitter", id: 409789998
+mas "sonos", id: 1262914541

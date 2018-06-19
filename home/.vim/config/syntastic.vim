@@ -20,3 +20,5 @@ let g:syntastic_auto_loc_list=2
 endif
 
 let g:syntastic_cpp_config_file = '.syntastic'
+let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'

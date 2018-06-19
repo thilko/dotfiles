@@ -28,3 +28,6 @@
 [submodule "home/.vim/bundle/vim-surround"]
 	path = home/.vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "home/.vim/bundle/vim-jsx"]
+	path = home/.vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
