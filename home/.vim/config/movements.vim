@@ -1,6 +1,5 @@
 " Needed on some linux distros.
 " see http://www.adamlowe.me/2009/12/vim-destroys-all-other-rails-editors.html
-call pathogen#infect()
 
 function! MoveLineUp()
     call MoveLineOrVisualUp(".", "")
