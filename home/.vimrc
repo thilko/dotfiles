@@ -1,8 +1,5 @@
 set nocompatible
 
-" use pathogen to load plugins/etc.
-execute pathogen#infect()
-
 runtime! config/*
 runtime! config/plugins/*
 
