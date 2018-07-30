@@ -3,7 +3,7 @@ set nocompatible
 runtime! config/*
 runtime! config/plugins/*
 
-syntax on
+" syntax on
 
 set laststatus=2
 let g:lightline = { 'colorscheme': 'jellybeans' }
@@ -40,7 +40,7 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 " I - don't give the intro message when starting Vim.
 set shortmess=filmnrxtTI
 
-syntax enable
+" syntax enable
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -82,9 +82,9 @@ set noswapfile                     " And no swap files
 set tags^=./tags
 
 " Filetypes
-filetype on                        " Enable filetype detection
-filetype indent on                 " Enable filetype-specific indenting
-filetype plugin on                 " Enable filetype-specific plugins
+" filetype on                        " Enable filetype detection
+" filetype indent on                 " Enable filetype-specific indenting
+" filetype plugin on                 " Enable filetype-specific plugins
 
 set autoread
 
@@ -135,4 +135,3 @@ set showmatch                      " Show matching bracket
 " Clipboard
 " set clipboard=unnamed              " use the system clipboard
 set clipboard=unnamedplus          " ... for linux
-

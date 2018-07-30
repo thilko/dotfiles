@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/bundle')
 
-Plug 'Shougo/context_filetype.vim'
+" Plug 'Shougo/context_filetype.vim'
 " Plug 'SirVer/ultisnips'
 Plug 'epmatsw/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
