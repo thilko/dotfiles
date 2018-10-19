@@ -22,6 +22,10 @@ cask "wireshark"
 cask "dbeaver-community"
 cask "gpg-suite"
 cask "font-mononoki"
+cask "sketch"
+cask "font-fira-code"
+
+tap "font-fira-code"
 
 brew "zsh"
 brew "zsh-completions"
@@ -51,6 +55,7 @@ brew "ansible"
 brew "hub"
 brew "p7zip"
 brew "jq"
+brew "fd"
 
 mas "Twitter", id: 409789998
-mas "sonos", id: 1262914541
+#mas "sonos", id: 1262914541

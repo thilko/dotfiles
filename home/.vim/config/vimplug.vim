@@ -21,6 +21,7 @@ Plug 'tyru/caw.vim'
 Plug 'vim-scripts/DirDiff.vim'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeSmartToggle', 'NERDTree', 'NERDTreeToggle', 'NERDTreeFind' ] } "
+Plug 'tclem/vim-arduino'
 
 Plug 'Keithbsmiley/rspec.vim', { 'for': 'rspec' }
 "Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/bundles/vimproc', 'do': 'make "clean && make' }
