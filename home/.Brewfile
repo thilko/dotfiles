@@ -25,8 +25,6 @@ cask "font-mononoki"
 cask "sketch"
 cask "font-fira-code"
 
-tap "font-fira-code"
-
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
