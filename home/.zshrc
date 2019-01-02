@@ -91,3 +91,6 @@ if [[ "$TMUX" == "" ]]; then
     tmux -2 new-session -s dev
   fi
 fi
+
+# added by travis gem
+[ -f /Users/thilko/.travis/travis.sh ] && source /Users/thilko/.travis/travis.sh

@@ -43,6 +43,7 @@
   co = checkout
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset(%cn)' --abbrev-commit
   cp = cherry-pick
+  set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 [push]
 	default = current
 [credential]
