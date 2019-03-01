@@ -94,3 +94,7 @@ fi
 
 # added by travis gem
 [ -f /Users/thilko/.travis/travis.sh ] && source /Users/thilko/.travis/travis.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/thilko/.sdkman"
+[[ -s "/Users/thilko/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/thilko/.sdkman/bin/sdkman-init.sh"
