@@ -85,11 +85,10 @@ chruby ruby-2.4.1
 alias vpn-manager='docker run --rm -v $(pwd):/certs -v $(pwd):/user_certs 419003778484.dkr.ecr.eu-central-1.amazonaws.com/vpn-manager:latest'
 
 if [[ "$TMUX" == "" ]]; then
-  if tmux has-session -t dev; then
-    tmux -2 attach-session -t dev
-  else
-    tmux -2 new-session -s dev
-  fi
+  tmux new-session -d 
+  tmux split-window -v
+  tmux split-window -h
+  tmux -2 attach-session -d
 fi
 
 # added by travis gem
