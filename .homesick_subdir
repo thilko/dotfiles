@@ -1,1 +1,4 @@
 .vim/config/plugins
+.homesick/repos/dotfiles/home/.vim/autoload
+.homesick/repos/dotfiles/home/.vim/config
+.homesick/repos/dotfiles/home/.vim

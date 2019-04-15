@@ -1,8 +1,1 @@
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
-au BufWritePre *.rb :%s/\s\+$//e
+/Users/thilko/.homesick/repos/dotfiles/home/.homesick/repos/dotfiles/home/.vim/config/whitespaces.vim
