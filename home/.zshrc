@@ -79,9 +79,6 @@ for f in ~/.zsh/config/*; do source $f; done
 
 # export TERM='xterm-256color'
 
-source /usr/local/share/chruby/chruby.sh
-chruby ruby-2.4.1
-
 alias vpn-manager='docker run --rm -v $(pwd):/certs -v $(pwd):/user_certs 419003778484.dkr.ecr.eu-central-1.amazonaws.com/vpn-manager:latest'
 
 if [[ "$TMUX" == "" ]]; then
@@ -91,9 +88,7 @@ if [[ "$TMUX" == "" ]]; then
   tmux -2 attach-session -d
 fi
 
-# added by travis gem
-[ -f /Users/thilko/.travis/travis.sh ] && source /Users/thilko/.travis/travis.sh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/thilko/.sdkman"
-[[ -s "/Users/thilko/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/thilko/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/home/thilko/.sdkman"
+[[ -s "/home/thilko/.sdkman/bin/sdkman-init.sh" ]] && source "/home/thilko/.sdkman/bin/sdkman-init.sh"
