@@ -84,7 +84,6 @@ alias vpn-manager='docker run --rm -v $(pwd):/certs -v $(pwd):/user_certs 419003
 if [[ "$TMUX" == "" ]]; then
   tmux new-session -d 
   tmux split-window -v
-  tmux split-window -h
   tmux -2 attach-session -d
 fi
 
