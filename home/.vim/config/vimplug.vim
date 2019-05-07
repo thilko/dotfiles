@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/bundle')
 
-Plug 'epmatsw/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'int3/vim-extradite'

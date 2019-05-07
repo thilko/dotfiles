@@ -53,5 +53,5 @@
   smudge = git-lfs smudge -- %f
   required = true
 [user]
-  name = Thilko Richter
-  email = me@thilko.com
+	name = Thilko Richter
+	email = me@thilko.com
