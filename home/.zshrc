@@ -88,7 +88,10 @@ if [[ "$TMUX" == "" ]]; then
   tmux -2 attach-session -d
 fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/thilko/.sdkman"
 [[ -s "/home/thilko/.sdkman/bin/sdkman-init.sh" ]] && source "/home/thilko/.sdkman/bin/sdkman-init.sh"
+export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
