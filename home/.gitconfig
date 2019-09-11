@@ -2,7 +2,6 @@
   path = ~/.gitidentity
 [github]
   user = thilko
-  token = 896af5ea1ed34bf260cb00b5353b5a47
 [color]
   diff = auto
   status = auto
@@ -53,5 +52,5 @@
   smudge = git-lfs smudge -- %f
   required = true
 [user]
-  name = Thilko Richter
-  email = me@thilko.com
+	name = Thilko Richter
+	email = me@thilko.com

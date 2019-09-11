@@ -84,7 +84,6 @@ alias vpn-manager='docker run --rm -v $(pwd):/certs -v $(pwd):/user_certs 419003
 if [[ "$TMUX" == "" ]]; then
   tmux new-session -d 
   tmux split-window -v
-  tmux split-window -h
   tmux -2 attach-session -d
 fi
 
@@ -95,3 +94,5 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="/home/thilko/.sdkman"
 [[ -s "/home/thilko/.sdkman/bin/sdkman-init.sh" ]] && source "/home/thilko/.sdkman/bin/sdkman-init.sh"
 export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
+
+source /usr/local/share/chruby/chruby.sh
