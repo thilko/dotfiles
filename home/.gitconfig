@@ -1,7 +1,5 @@
 [include]
   path = ~/.gitidentity
-[github]
-  user = thilko
 [color]
   diff = auto
   status = auto
