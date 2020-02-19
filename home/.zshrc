@@ -79,20 +79,20 @@ for f in ~/.zsh/config/*; do source $f; done
 
 # export TERM='xterm-256color'
 
-alias vpn-manager='docker run --rm -v $(pwd):/certs -v $(pwd):/user_certs 419003778484.dkr.ecr.eu-central-1.amazonaws.com/vpn-manager:latest'
+#alias vpn-manager='docker run --rm -v $(pwd):/certs -v $(pwd):/user_certs 419003778484.dkr.ecr.eu-central-1.amazonaws.com/vpn-manager:latest'
 
-if [[ "$TMUX" == "" ]]; then
-  tmux new-session -d 
-  tmux split-window -v
-  tmux -2 attach-session -d
-fi
+#if [[ "$TMUX" == "" ]]; then
+#  tmux new-session -d 
+#  tmux split-window -v
+#  tmux -2 attach-session -d
+#fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/thilko/.sdkman"
-[[ -s "/home/thilko/.sdkman/bin/sdkman-init.sh" ]] && source "/home/thilko/.sdkman/bin/sdkman-init.sh"
-export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
+#export SDKMAN_DIR="/home/thilko/.sdkman"
+#[[ -s "/home/thilko/.sdkman/bin/sdkman-init.sh" ]] && source "/home/thilko/.sdkman/bin/sdkman-init.sh"
+#export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
 
-source /usr/local/share/chruby/chruby.sh
+#source /usr/local/share/chruby/chruby.sh

@@ -1,6 +1,0 @@
-if [[ "Linux" == `uname` ]]
-then
-	. /usr/share/autojump/autojump.zsh
-
-  PATH=$PATH:~/opt/nodejs/bin
-fi
