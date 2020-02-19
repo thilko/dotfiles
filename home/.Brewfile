@@ -24,6 +24,7 @@ cask "gpg-suite"
 cask "font-mononoki"
 cask "sketch"
 cask "font-fira-code"
+cask "libreoffice"
 
 brew "zsh"
 brew "zsh-completions"
