@@ -98,12 +98,6 @@ then
 
   [[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-  # Mac specific keyboard mappings
-  bindkey '^[[H' beginning-of-line
-  bindkey '^[[F' end-of-line
-  bindkey '^[[5~' up-history
-  bindkey '^[[6~' down-history
-
   export SDKMAN_DIR="/Users/thilko/.sdkman"
   [[ -s "/home/thilko/.sdkman/bin/sdkman-init.sh" ]] && source "/home/thilko/.sdkman/bin/sdkman-init.sh"
 fi
