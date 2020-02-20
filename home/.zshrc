@@ -1,14 +1,6 @@
-
-# general zsh configuration
-# ----------------------------------------------------------------
-autoload login-test-server
 autoload -U compinit
 compinit
 
-zle -N login-test-server
-bindkey "^[l" login-test-server
-
-# crazy mad shit
 unsetopt correct_all
 unsetopt correct
 unsetopt bgnice nomatch
@@ -120,4 +112,5 @@ fi
 if [[ "spitaler.uberspace.de" == `hostname` ]]
 then
   prompt walters
+  export DOC_ROOT=/var/www/virtual/thilko
 fi
