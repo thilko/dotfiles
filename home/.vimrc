@@ -135,3 +135,9 @@ set showmatch                      " Show matching bracket
 " Clipboard
 " set clipboard=unnamed              " use the system clipboard
 set clipboard=unnamedplus          " ... for linux
+
+
+" cursorline
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
