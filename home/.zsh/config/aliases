@@ -33,4 +33,4 @@ alias c="code"
 
 alias vi="vim"
 
-alias d_stop_all=docker stop $(docker ps -aq)
+alias d_stop_all="docker stop $(docker ps -aq)"
