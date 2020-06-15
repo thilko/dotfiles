@@ -33,4 +33,6 @@ alias c="code"
 
 alias vi="vim"
 
-alias d_stop_all="docker stop $(docker ps -aq)"
+alias dcsa="docker ps -qa | xargs docker stop"
+alias dcp="docker container prune"
+
