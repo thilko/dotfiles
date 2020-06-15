@@ -86,7 +86,7 @@ then
 
 
   export ARCHFLAGS="-arch x86_64"
-  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_151)
+  export JAVA_HOME=$(/usr/libexec/java_home -v 13.0.2)
   export PATH=/Users/thilko/.gem/ruby/2.1.2/bin:/Users/thilko/.rubies/ruby-2.1.2/lib/ruby/gems/2.1.2/bin:/Users/thilko/.rubies/ruby-2.1.2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/MacGPG2/bin:/Users/thilko/Library/grails-2.4.3/bin:~/Library/grails-2.4.3/bin
   export PATH=/usr/local/bin:/usr/local/sbin:$PATH
   export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
