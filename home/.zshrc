@@ -71,40 +71,24 @@ stty stop undef
 # Includes
 for f in ~/.zsh/config/*; do source $f; done
 
-if [[ "Darwin" == `uname` ]]
-then
-  if [[ "$TMUX" == "" ]]; then
-    tmux new-session -d 
-    tmux split-window -v
-    tmux -2 attach-session -d
-  fi
-
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-  export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
-
-
-  export ARCHFLAGS="-arch x86_64"
-  export JAVA_HOME=$(/usr/libexec/java_home -v 13.0.2)
-  export PATH=/Users/thilko/.gem/ruby/2.1.2/bin:/Users/thilko/.rubies/ruby-2.1.2/lib/ruby/gems/2.1.2/bin:/Users/thilko/.rubies/ruby-2.1.2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/MacGPG2/bin:/Users/thilko/Library/grails-2.4.3/bin:~/Library/grails-2.4.3/bin
-  export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-  export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
-
-  if [ -f `brew --prefix`/etc/autojump ]; then
-    . `brew --prefix`/etc/autojump
-  fi
-
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  source /usr/local/share/chruby/chruby.sh
-
-  [[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
-  export SDKMAN_DIR="/Users/thilko/.sdkman"
-  [[ -s "/home/thilko/.sdkman/bin/sdkman-init.sh" ]] && source "/home/thilko/.sdkman/bin/sdkman-init.sh"
+if [[ "$TMUX" == "" ]]; then
+  tmux new-session -d 
+  tmux split-window -v
+  tmux -2 attach-session -d
 fi
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
+export ARCHFLAGS="-arch x86_64"
+
+source /usr/share/chruby/chruby.sh
+
+chruby 2.7.1
+
+# cloud
 if [[ "spitaler.uberspace.de" == `hostname` ]]
 then
   prompt walters
