@@ -73,7 +73,6 @@ for f in ~/.zsh/config/*; do source $f; done
 
 if [[ "$TMUX" == "" ]]; then
   tmux new-session -d 
-  tmux split-window -v
   tmux -2 attach-session -d
 fi
 
